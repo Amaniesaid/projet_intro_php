@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %} {#héritage d'un template#}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello {{ controller_name ~ " " ~ realisator }} {{ realisator }}! ✅</h1> {#J'affiche ce qui est attribué à la variable dans le 
+    controller (String/entier) je concatene evec le tild ~#}
+    {{ dump(articles) }} {#{ # commentaire # } #}
+    {% for article in articles %}
+        <li>Titre: {{ article.titre}} - Categorie: {{article.FkIdCategorie.nom}} </li> 
+        <li>Contenu: {{ article.contenu }}</li>
+        <li>Publié le: {{ article.DateCreation | date('d/m/Y H:i:s')}} créer par: {{ article.auteur }}</li>
+    {% endfor %}
+</div>
+{% endblock %}

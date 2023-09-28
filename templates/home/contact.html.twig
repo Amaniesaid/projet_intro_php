@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Contact {% endblock %}
+
+{% block body %}
+
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello {{ contact_name ~ ": " ~ numero }} ! </h1> {#J'affiche ce qui est attribué à la variable dans le 
+    controller (String/entier) je concatene evec le tild ~#}
+
+</div>
+{% endblock %}

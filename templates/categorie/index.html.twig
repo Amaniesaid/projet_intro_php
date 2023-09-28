@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CategorieController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello {{ controller_name }}! ✅</h1>
+
+    <ul>
+        <h2>La liste des categories:</h2>
+        {% for categorie in categories %}
+
+        <li>{{ categorie.nom}}({{categorie.articles | length}})</li>
+        
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
